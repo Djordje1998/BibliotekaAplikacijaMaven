@@ -58,7 +58,7 @@ public class TipKomponente implements GenericEntity {
      * @param naziv Naziv komponente kao String.
      * 
      * @throws java.lang.NullPointerException Ako je vrednost parametra null.
-     * @throws lava.langRuntimeException Ako je vrednost parametra String koji je kraci od 2 karaktera.
+     * @throws lava.lang.RuntimeException Ako je vrednost parametra String koji je kraci od 2 karaktera.
      */
     public void setNaziv(String naziv) {
     	if(naziv==null) {
