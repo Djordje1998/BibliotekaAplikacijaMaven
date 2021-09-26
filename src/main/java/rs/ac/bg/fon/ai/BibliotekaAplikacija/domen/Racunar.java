@@ -32,7 +32,7 @@ public class Racunar implements GenericEntity {
         setNamena(namena);
         setGarancija(garancija);
         setUkupnaCena(ukupnaCena);
-        setStavke(stavke);
+        setStavke(new ArrayList<StavkaRacunara>());
     }
 
     public Date getGarancija() {
@@ -67,9 +67,6 @@ public class Racunar implements GenericEntity {
     public void setNazivRacunara(String nazivRacunara) {
     	if(nazivRacunara==null) {
     		throw new NullPointerException("Naziv racunara ne sme biti null");
-    	}
-    	if(nazivRacunara.length()<2) {
-    		throw new RuntimeException("Naziv racunara mora imati vise od 1 karaktera");
     	}
         this.nazivRacunara = nazivRacunara;
     }

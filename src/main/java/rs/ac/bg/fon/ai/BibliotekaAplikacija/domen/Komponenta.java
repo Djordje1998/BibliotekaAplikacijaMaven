@@ -63,9 +63,6 @@ public class Komponenta implements GenericEntity {
     	if(nazivKomponente==null) {
     		throw new NullPointerException("Naziv komponente ne sme biti null");
     	}
-    	if(nazivKomponente.length()<2) {
-    		throw new RuntimeException("Naziv komponente mora imati vise od 1 karaktera ");
-    	}
         this.nazivKomponente = nazivKomponente;
     }
 

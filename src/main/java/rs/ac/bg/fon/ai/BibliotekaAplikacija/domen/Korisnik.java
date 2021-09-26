@@ -64,9 +64,6 @@ public class Korisnik implements GenericEntity {
     	if(ime==null) {
     		throw new NullPointerException("Ime ne sme biti null");
     	}
-    	if(ime.length()<2) {
-    		throw new RuntimeException("Ime mora imati vise od 2 karaktera");
-    	}
         this.ime = ime;
     }
 
