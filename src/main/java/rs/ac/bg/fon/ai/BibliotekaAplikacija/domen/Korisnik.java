@@ -51,7 +51,7 @@ public class Korisnik implements GenericEntity {
     		throw new NullPointerException("Sifra ne sme biti null");
     	}
     	if(sifra.length()<5) {
-    		throw new RuntimeException("Sifra mora imati vise od 5 karaktera radi bezbednosti");
+    		throw new RuntimeException("Sifra mora imati vise od 4 karaktera radi bezbednosti");
     	}
         this.sifra = sifra;
     }
