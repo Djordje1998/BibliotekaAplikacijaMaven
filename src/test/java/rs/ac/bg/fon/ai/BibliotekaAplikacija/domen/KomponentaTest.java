@@ -83,6 +83,8 @@ class KomponentaTest {
 		TipKomponente t = new TipKomponente(3, "CPU");
 		k.setTipKomponente(t);
 		assertEquals(t, k.getTipKomponente());
+		assertEquals(3, k.getTipKomponente().getTipKomponenteID());
+		assertEquals("CPU", k.getTipKomponente().getNaziv());
 	}
 	
 	@Test

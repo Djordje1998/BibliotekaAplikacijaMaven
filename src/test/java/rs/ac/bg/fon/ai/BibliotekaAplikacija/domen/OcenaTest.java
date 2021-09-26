@@ -63,6 +63,8 @@ class OcenaTest {
 		TipKomponente t = new TipKomponente(1, "CPU");
 		Komponenta k = new Komponenta(2, "Procesor", t, 400.2, "Procesor dobar", 14888.99);
 		o.setKomponenta(k);
+		assertEquals(t, o.getKomponenta().getTipKomponente());
+		assertEquals(k, o.getKomponenta());
 		assertEquals(2, o.getKomponenta().getKomponentaId());
 		assertEquals("Procesor", o.getKomponenta().getNazivKomponente());
 		assertEquals(1, o.getKomponenta().getTipKomponente().getTipKomponenteID());
