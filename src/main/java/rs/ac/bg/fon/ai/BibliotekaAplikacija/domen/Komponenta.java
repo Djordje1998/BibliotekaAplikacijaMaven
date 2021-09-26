@@ -82,10 +82,10 @@ public class Komponenta implements GenericEntity {
     }
 
     public void setOpis(String opis) {
-    	if(nazivKomponente==null) {
+    	if(opis==null) {
     		throw new NullPointerException("Opis komponente ne sme biti null");
     	}
-    	if(nazivKomponente.length()<5) {
+    	if(opis.length()<5) {
     		throw new RuntimeException("Opis komponente mora imati vise od 4 karaktera ");
     	}
         this.opis = opis;
@@ -143,6 +143,8 @@ public class Komponenta implements GenericEntity {
         }
         return true;
     }
+    
+    
 
     public static String vratiZakljucak(int prva, int druga) {
         if (prva > druga) {
