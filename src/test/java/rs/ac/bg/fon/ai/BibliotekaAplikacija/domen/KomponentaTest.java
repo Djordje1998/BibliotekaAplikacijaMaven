@@ -35,6 +35,8 @@ class KomponentaTest {
 		assertNotNull(k);
 		assertEquals(4, k.getKomponentaId());
 		assertEquals("Procesor", k.getNazivKomponente());
+		assertEquals(3, k.getTipKomponente().getTipKomponenteID());
+		assertEquals("CPU", k.getTipKomponente().getNaziv());
 		assertEquals(500.5, k.getTakt());
 		assertEquals("Prosecan procesor", k.getOpis());
 		assertEquals(14500.99, k.getCena());
