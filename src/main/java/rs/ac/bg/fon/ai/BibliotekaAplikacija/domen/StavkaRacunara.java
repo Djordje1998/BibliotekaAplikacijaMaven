@@ -27,14 +27,14 @@ public class StavkaRacunara implements GenericEntity {
     }
 
     public StavkaRacunara(Racunar racunar, int redniBroj, Komponenta komponenta, double cena, int kolicina, double ukupnaCena, Date datumKreiranja, Korisnik kreirao) {
-        this.racunar = racunar;
-        this.redniBroj = redniBroj;
-        this.komponenta = komponenta;
-        this.cena = cena;
-        this.kolicina = kolicina;
-        this.ukupnaCena = ukupnaCena;
-        this.datumKreiranja = datumKreiranja;
-        this.kreirao = kreirao;
+        setRacunar(racunar);
+        setRedniBroj(redniBroj);
+        setKomponenta(komponenta);
+        setCena(cena);
+        setKolicina(kolicina);
+        setUkupnaCena(ukupnaCena);
+        setDatumKreiranja(datumKreiranja);
+        setKreirao(kreirao);
     }
 
     public int getRedniBroj() {
@@ -42,6 +42,9 @@ public class StavkaRacunara implements GenericEntity {
     }
 
     public void setRedniBroj(int redniBroj) {
+    	if(redniBroj < 0) {
+    		throw new RuntimeException("Redni broj stavke mora biti pozitivan broj");
+    	}
         this.redniBroj = redniBroj;
     }
 
@@ -50,6 +53,9 @@ public class StavkaRacunara implements GenericEntity {
     }
 
     public void setCena(double cena) {
+    	if(cena < 0) {
+    		throw new RuntimeException("Cena stavke mora biti pozitivan broj");
+    	}
         this.cena = cena;
     }
 
@@ -58,6 +64,9 @@ public class StavkaRacunara implements GenericEntity {
     }
 
     public void setDatumKreiranja(Date datumKreiranja) {
+    	if(datumKreiranja==null) {
+    		throw new NullPointerException("Datum kreiranja stavke ne sme biti null");
+    	}
         this.datumKreiranja = datumKreiranja;
     }
 
@@ -66,6 +75,9 @@ public class StavkaRacunara implements GenericEntity {
     }
 
     public void setKreirao(Korisnik kreirao) {
+    	if(kreirao==null) {
+    		throw new NullPointerException("Korisnik koji kreira stavku ne sme biti null");
+    	}
         this.kreirao = kreirao;
     }
 
@@ -74,6 +86,9 @@ public class StavkaRacunara implements GenericEntity {
     }
 
     public void setKolicina(int kolicina) {
+    	if(kolicina < 0) {
+    		throw new RuntimeException("Kolicina stavke mora biti pozitivan broj");
+    	}
         this.kolicina = kolicina;
     }
 
@@ -82,6 +97,9 @@ public class StavkaRacunara implements GenericEntity {
     }
 
     public void setUkupnaCena(double ukupnaCena) {
+    	if(ukupnaCena < 0) {
+    		throw new RuntimeException("Ukupna cena stavke mora biti pozitivan broj");
+    	}
         this.ukupnaCena = ukupnaCena;
     }
 
@@ -90,6 +108,9 @@ public class StavkaRacunara implements GenericEntity {
     }
 
     public void setRacunar(Racunar racunar) {
+    	if(racunar==null) {
+    		throw new NullPointerException("Racunar stavke ne sme biti null");
+    	}
         this.racunar = racunar;
     }
 
@@ -98,6 +119,9 @@ public class StavkaRacunara implements GenericEntity {
     }
 
     public void setKomponenta(Komponenta komponenta) {
+    	if(komponenta==null) {
+    		throw new NullPointerException("Komponenta stavke ne sme biti null");
+    	}
         this.komponenta = komponenta;
     }
 

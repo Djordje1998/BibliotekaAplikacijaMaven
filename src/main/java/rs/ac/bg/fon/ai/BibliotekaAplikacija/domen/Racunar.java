@@ -27,12 +27,12 @@ public class Racunar implements GenericEntity {
     }
 
     public Racunar(int racunarID, String nazivRacunara, String namena, Date garancija, double ukupnaCena) {
-        this.racunarID = racunarID;
-        this.nazivRacunara = nazivRacunara;
-        this.namena = namena;
-        this.garancija = garancija;
-        this.ukupnaCena = ukupnaCena;
-        this.stavke = new ArrayList<>();
+        setRacunarID(racunarID);
+        setNazivRacunara(nazivRacunara);
+        setNamena(namena);
+        setGarancija(garancija);
+        setUkupnaCena(ukupnaCena);
+        setStavke(new ArrayList<StavkaRacunara>());
     }
 
     public Date getGarancija() {
@@ -40,6 +40,12 @@ public class Racunar implements GenericEntity {
     }
 
     public void setGarancija(Date garancija) {
+    	if(garancija==null) {
+    		throw new NullPointerException("Garancija racunara ne sme biti null");
+    	}
+    	if(garancija.before(new Date())) {
+    		throw new RuntimeException("Garancija racunara mora biti datum u buducnosti");
+    	}
         this.garancija = garancija;
     }
 
@@ -48,6 +54,9 @@ public class Racunar implements GenericEntity {
     }
 
     public void setRacunarID(int racunarID) {
+    	if(racunarID < 0) {
+    		throw new RuntimeException("Id racunara mora biti pozitivan broj");
+    	}
         this.racunarID = racunarID;
     }
 
@@ -56,6 +65,9 @@ public class Racunar implements GenericEntity {
     }
 
     public void setNazivRacunara(String nazivRacunara) {
+    	if(nazivRacunara==null) {
+    		throw new NullPointerException("Naziv racunara ne sme biti null");
+    	}
         this.nazivRacunara = nazivRacunara;
     }
 
@@ -64,6 +76,12 @@ public class Racunar implements GenericEntity {
     }
 
     public void setNamena(String namena) {
+    	if(namena==null) {
+    		throw new NullPointerException("Namena racunara ne sme biti null");
+    	}
+    	if(namena.length()<5) {
+    		throw new RuntimeException("Namena racunara mora imati vise od 4 karaktera");
+    	}
         this.namena = namena;
     }
 
@@ -77,6 +95,9 @@ public class Racunar implements GenericEntity {
     }
 
     public void setStavke(ArrayList<StavkaRacunara> stavke) {
+    	if(stavke==null) {
+    		throw new NullPointerException("Stavke racunara ne smeju biti null");
+    	}
         this.stavke = stavke;
     }
 
@@ -85,6 +106,9 @@ public class Racunar implements GenericEntity {
     }
 
     public void setUkupnaCena(double ukupnaCena) {
+    	if(ukupnaCena < 0) {
+    		throw new RuntimeException("Ukupna cena racunara mora biti pozitivan broj");
+    	}
         this.ukupnaCena = ukupnaCena;
     }
 
