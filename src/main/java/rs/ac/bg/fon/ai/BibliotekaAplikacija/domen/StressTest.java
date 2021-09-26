@@ -11,7 +11,7 @@ import java.sql.ResultSet;
  * Klasa koje predstasvlja stres testove za komponente i racunara.
  * Svaki test ima jedinstvenog ID-a, naziva testa i detaljnih opisa testa.
  *
- * @author DarkForce
+ * @author Djordje Novakovic
  * @version 1.0
  */
 public class StressTest implements GenericEntity {
