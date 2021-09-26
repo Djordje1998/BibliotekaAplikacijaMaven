@@ -21,9 +21,9 @@ public class StressTest implements GenericEntity {
     }
 
     public StressTest(int stressTestId, String nazivTesta, String opisTesta) {
-        this.stressTestId = stressTestId;
-        this.nazivTesta = nazivTesta;
-        this.opisTesta = opisTesta;
+        setStressTestId(stressTestId);
+        setNazivTesta(nazivTesta);
+        setOpisTesta(opisTesta);
     }
 
     public String getOpisTesta() {
@@ -31,6 +31,12 @@ public class StressTest implements GenericEntity {
     }
 
     public void setOpisTesta(String opisTesta) {
+    	if(opisTesta==null) {
+    		throw new NullPointerException("Opis stress testa ne sme biti null");
+    	}
+    	if(opisTesta.length()<5) {
+    		throw new RuntimeException("Opis stress testa mora imati vise od 4 karaktera");
+    	}
         this.opisTesta = opisTesta;
     }
 
@@ -39,6 +45,9 @@ public class StressTest implements GenericEntity {
     }
 
     public void setStressTestId(int stressTestId) {
+    	if(stressTestId < 0) {
+    		throw new RuntimeException("Id stress testa mora biti pozitivan broj");
+    	}
         this.stressTestId = stressTestId;
     }
 
@@ -47,6 +56,12 @@ public class StressTest implements GenericEntity {
     }
 
     public void setNazivTesta(String nazivTesta) {
+    	if(nazivTesta==null) {
+    		throw new NullPointerException("Naziv stress testa ne sme biti null");
+    	}
+    	if(nazivTesta.length()<2) {
+    		throw new RuntimeException("Naziv stress testa mora imati vise od 1 karaktera");
+    	}
         this.nazivTesta = nazivTesta;
     }
 

@@ -21,9 +21,9 @@ public class Ocena implements GenericEntity {
     }
 
     public Ocena(Komponenta komponenta, StressTest stressTest, double vrednostOcene) {
-        this.komponenta = komponenta;
-        this.stressTest = stressTest;
-        this.vrednostOcene = vrednostOcene;
+        setKomponenta(komponenta);
+        setStressTest(stressTest);
+        setVrednostOcene(vrednostOcene);
     }
 
     public double getVrednostOcene() {
@@ -31,6 +31,9 @@ public class Ocena implements GenericEntity {
     }
 
     public void setVrednostOcene(double vrednostOcene) {
+    	if(vrednostOcene<0) {
+    		throw new RuntimeException("Vrednost ocene mora biti pozitivan broj");
+    	}
         this.vrednostOcene = vrednostOcene;
     }
 
@@ -39,6 +42,9 @@ public class Ocena implements GenericEntity {
     }
 
     public void setKomponenta(Komponenta komponenta) {
+    	if(komponenta==null) {
+    		throw new NullPointerException("Komponenta ima null vrednost");
+    	}
         this.komponenta = komponenta;
     }
 
@@ -47,6 +53,9 @@ public class Ocena implements GenericEntity {
     }
 
     public void setStressTest(StressTest stressTest) {
+    	if(stressTest==null) {
+    		throw new NullPointerException("Stress test ima null vrednost");
+    	}
         this.stressTest = stressTest;
     }
 

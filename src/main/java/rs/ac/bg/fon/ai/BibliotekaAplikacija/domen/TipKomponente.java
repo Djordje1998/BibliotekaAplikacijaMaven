@@ -20,8 +20,8 @@ public class TipKomponente implements GenericEntity {
     }
 
     public TipKomponente(int tipKomponenteID, String naziv) {
-        this.tipKomponenteID = tipKomponenteID;
-        this.naziv = naziv;
+        setTipKomponenteID(tipKomponenteID);
+        setNaziv(naziv);
     }
 
     public String getNaziv() {
@@ -29,6 +29,12 @@ public class TipKomponente implements GenericEntity {
     }
 
     public void setNaziv(String naziv) {
+    	if(naziv==null) {
+    		throw new NullPointerException("Naziv tipa komponente ne sme biti null");
+    	}
+    	if(naziv.length()<2) {
+    		throw new RuntimeException("Naziv tipa komponente mora imati vise od 1 karaktera");
+    	}
         this.naziv = naziv;
     }
 
@@ -37,6 +43,9 @@ public class TipKomponente implements GenericEntity {
     }
 
     public void setTipKomponenteID(int tipKomponenteID) {
+    	if(tipKomponenteID < 0) {
+    		throw new RuntimeException("Id tipa komponente mora biti pozitivan broj");
+    	}
         this.tipKomponenteID = tipKomponenteID;
     }
 

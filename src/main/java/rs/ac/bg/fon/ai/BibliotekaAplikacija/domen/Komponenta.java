@@ -25,12 +25,12 @@ public class Komponenta implements GenericEntity {
     }
 
     public Komponenta(int komponentaId, String nazivKomponente, TipKomponente tipKomponente, double takt, String opis, double cena) {
-        this.komponentaId = komponentaId;
-        this.nazivKomponente = nazivKomponente;
-        this.tipKomponente = tipKomponente;
-        this.takt = takt;
-        this.opis = opis;
-        this.cena = cena;
+        setKomponentaId(komponentaId);
+        setNazivKomponente(nazivKomponente);
+        setTipKomponente(tipKomponente);
+        setTakt(takt);
+        setOpis(opis);
+        setCena(cena);
     }
 
     public double getTakt() {
@@ -38,6 +38,9 @@ public class Komponenta implements GenericEntity {
     }
 
     public void setTakt(double takt) {
+    	if(takt < 0) {
+    		throw new RuntimeException("Takt mora biti pozitivan broj");
+    	}
         this.takt = takt;
     }
 
@@ -46,6 +49,9 @@ public class Komponenta implements GenericEntity {
     }
 
     public void setKomponentaId(int komponentaId) {
+    	if(komponentaId < 0) {
+    		throw new RuntimeException("Id komponente mora biti pozitivan broj");
+    	}
         this.komponentaId = komponentaId;
     }
 
@@ -54,6 +60,12 @@ public class Komponenta implements GenericEntity {
     }
 
     public void setNazivKomponente(String nazivKomponente) {
+    	if(nazivKomponente==null) {
+    		throw new NullPointerException("Naziv komponente ne sme biti null");
+    	}
+    	if(nazivKomponente.length()<2) {
+    		throw new RuntimeException("Naziv komponente mora imati vise od 1 karaktera ");
+    	}
         this.nazivKomponente = nazivKomponente;
     }
 
@@ -62,6 +74,9 @@ public class Komponenta implements GenericEntity {
     }
 
     public void setTipKomponente(TipKomponente tipKomponente) {
+    	if(tipKomponente==null) {
+    		throw new NullPointerException("Tip komponente ne sme biti null");
+    	}
         this.tipKomponente = tipKomponente;
     }
 
@@ -70,6 +85,12 @@ public class Komponenta implements GenericEntity {
     }
 
     public void setOpis(String opis) {
+    	if(nazivKomponente==null) {
+    		throw new NullPointerException("Opis komponente ne sme biti null");
+    	}
+    	if(nazivKomponente.length()<5) {
+    		throw new RuntimeException("Opis komponente mora imati vise od 4 karaktera ");
+    	}
         this.opis = opis;
     }
 
@@ -78,6 +99,9 @@ public class Komponenta implements GenericEntity {
     }
 
     public void setCena(double cena) {
+    	if(cena < 0) {
+    		throw new RuntimeException("Cena komponente mora biti pozitivan broj");
+    	}
         this.cena = cena;
     }
 

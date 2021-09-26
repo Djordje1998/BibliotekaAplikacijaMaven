@@ -26,13 +26,13 @@ public class Benchmark implements GenericEntity {
     }
 
     public Benchmark(int benchmarkId, Date datumBenchmarka, double bodoviPrvogRacunara, double bodoviDrugogRacunara, Racunar prviRacunar, Racunar drugiRacunar, StressTest stressTest) {
-        this.benchmarkId = benchmarkId;
-        this.datumBenchmarka = datumBenchmarka;
-        this.bodoviPrvogRacunara = bodoviPrvogRacunara;
-        this.bodoviDrugogRacunara = bodoviDrugogRacunara;
-        this.prviRacunar = prviRacunar;
-        this.drugiRacunar = drugiRacunar;
-        this.stressTest = stressTest;
+        setBenchmarkId(benchmarkId);
+        setDatumBenchmarka(datumBenchmarka);
+        setBodoviPrvogRacunara(bodoviPrvogRacunara);
+        setBodoviDrugogRacunara(bodoviDrugogRacunara);
+        setPrviRacunar(prviRacunar);
+        setDrugiRacunar(drugiRacunar);
+        setStressTest(stressTest);
     }
 
     public StressTest getStressTest() {
@@ -40,6 +40,9 @@ public class Benchmark implements GenericEntity {
     }
 
     public void setStressTest(StressTest stressTest) {
+    	if(stressTest==null) {
+    		throw new NullPointerException("Stress test benchmarka ne sme biti null");
+    	}
         this.stressTest = stressTest;
     }
 
@@ -48,6 +51,9 @@ public class Benchmark implements GenericEntity {
     }
 
     public void setBenchmarkId(int benchmarkId) {
+    	if(benchmarkId < 0) {
+    		throw new RuntimeException("Id benchmarka mora biti pozitivan broj");
+    	}
         this.benchmarkId = benchmarkId;
     }
 
@@ -56,6 +62,9 @@ public class Benchmark implements GenericEntity {
     }
 
     public void setDatumBenchmarka(Date datumBenchmarka) {
+    	if(datumBenchmarka==null) {
+    		throw new NullPointerException("Datum benchmarka ne sme biti null");
+    	}
         this.datumBenchmarka = datumBenchmarka;
     }
 
@@ -64,6 +73,9 @@ public class Benchmark implements GenericEntity {
     }
 
     public void setBodoviPrvogRacunara(double bodoviPrvogRacunara) {
+    	if(bodoviPrvogRacunara < 0) {
+    		throw new RuntimeException("Bodovi prvog racuanra benchmarka moraju biti pozitivan broj");
+    	}
         this.bodoviPrvogRacunara = bodoviPrvogRacunara;
     }
 
@@ -72,6 +84,9 @@ public class Benchmark implements GenericEntity {
     }
 
     public void setBodoviDrugogRacunara(double bodoviDrugogRacunara) {
+    	if(bodoviDrugogRacunara < 0) {
+    		throw new RuntimeException("Bodovi drugog racuanra benchmarka moraju biti pozitivan broj");
+    	}
         this.bodoviDrugogRacunara = bodoviDrugogRacunara;
     }
 
@@ -80,6 +95,9 @@ public class Benchmark implements GenericEntity {
     }
 
     public void setPrviRacunar(Racunar prviRacunar) {
+    	if(prviRacunar==null) {
+    		throw new NullPointerException("Prvi racunar benchmarka ne sme biti null");
+    	}
         this.prviRacunar = prviRacunar;
     }
 
@@ -88,6 +106,9 @@ public class Benchmark implements GenericEntity {
     }
 
     public void setDrugiRacunar(Racunar drugiRacunar) {
+    	if(drugiRacunar==null) {
+    		throw new NullPointerException("Drugi racunar benchmarka ne sme biti null");
+    	}
         this.drugiRacunar = drugiRacunar;
     }
 
