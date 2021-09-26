@@ -127,6 +127,7 @@ public class StavkaRacunara implements GenericEntity {
 
     @Override
     public void setId(int id) {
+    	// nije potrebno jer se dobija preko racunara koji je jak objeka
     }
 
     @Override
