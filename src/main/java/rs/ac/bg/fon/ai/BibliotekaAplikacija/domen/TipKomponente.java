@@ -58,7 +58,7 @@ public class TipKomponente implements GenericEntity {
      * @param naziv Naziv komponente kao String.
      * 
      * @throws java.lang.NullPointerException Ako je vrednost parametra null.
-     * @throws lava.lang.RuntimeException Ako je vrednost parametra String koji je kraci od 2 karaktera.
+     * @throws java.lang.RuntimeException Ako je vrednost parametra String koji je kraci od 2 karaktera.
      */
     public void setNaziv(String naziv) {
     	if(naziv==null) {
@@ -84,7 +84,7 @@ public class TipKomponente implements GenericEntity {
      * 
      * @param tipKomponenteID ID komponente kao int.
      * 
-     * @throws lava.langRuntimeException Ako je vrednost parametra int koji je negativan.
+     * @throws java.lang.RuntimeException Ako je vrednost parametra int koji je negativan.
      */
     public void setTipKomponenteID(int tipKomponenteID) {
     	if(tipKomponenteID < 0) {

@@ -64,7 +64,7 @@ public class Ocena implements GenericEntity {
      * 
      * @param vrednostOcene Vrednost ocene kao double.
      * 
-     * @throws lava.lang.RuntimeException Ako je vrednost atributa double vrednost manja od nule.
+     * @throws java.lang.RuntimeException Ako je vrednost atributa double vrednost manja od nule.
      */
     public void setVrednostOcene(double vrednostOcene) {
     	if(vrednostOcene<0) {

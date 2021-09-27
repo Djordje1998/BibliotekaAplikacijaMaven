@@ -20,17 +20,23 @@ import java.sql.ResultSet;
 public interface GenericEntity extends Serializable {
 
 	/**
-     * @return Vraca String ime tabele koje se nalazi u bazi podataka i koje odgovara klasi.
+	 * Vraca String ime tabele koje se nalazi u bazi podataka i koje odgovara klasi.
+	 * 
+     * @return String ime tabele koje se nalazi u bazi podataka i koje odgovara klasi.
      */
     String getTableName();
 
     /**
-     * @return Vraca String imena kolona u odgovarajucoj tabeli za dodavanje objekta u bazu.
+     * Vraca String imena kolona u odgovarajucoj tabeli za dodavanje objekta u bazu.
+     * 
+     * @return String imena kolona u odgovarajucoj tabeli za dodavanje objekta u bazu.
      */
     String getColumnNamesForInsert();
 
     /**
-     * @return Vraca String koji predstavlja SQL kod za unos konkretnih vrednosti objekta u bazu.
+     * Vraca String koji predstavlja SQL kod za unos konkretnih vrednosti objekta u bazu.
+     * 
+     * @return String koji predstavlja SQL kod za unos konkretnih vrednosti objekta u bazu.
      */
     String getInsertValues();
 
@@ -42,37 +48,55 @@ public interface GenericEntity extends Serializable {
     void setId(int id);
 
     /**
-     * @return Vraca String koji predstavlja SQL kod koji spaja vise tabela iz baze.
+     * Vraca String koji predstavlja SQL kod koji spaja vise tabela iz baze.
+     * 
+     * @return String koji predstavlja SQL kod koji spaja vise tabela iz baze.
      */
     String getJoinTables();
 
     /**
-     * @return Vraca String koji predstavlja kriterijum pretrage koji se dobija u query-ju od baze.
+     * Vraca String koji predstavlja kriterijum pretrage koji se dobija u query-ju od baze.
+     * 
+     * @return String koji predstavlja kriterijum pretrage koji se dobija u query-ju od baze.
      */
     String getLikeCriteria();
 
     /**
-     * @return Vraca String koji predstavlja kriterijum pretrage postojecih vrednosti u bazi.
+     * Vraca String koji predstavlja kriterijum pretrage postojecih vrednosti u bazi.
+     * 
+     * @return String koji predstavlja kriterijum pretrage postojecih vrednosti u bazi.
      */
     String getWhereCriteria();
 
     /**
+     * Vraca neku od domenski klasa koje implelemtiraju interfejs koju dobije kao odgovor od baze.
+     * Pretvara odgovor baze u objekat domenske klase.
+     * 
+     * @param rs ResultSet koji se dobija kao odgovor od baze.
      * @return GenericEntity u kome se nalaze vrednosti kao odgovor query-ja iz baze.
+     * 
+     * @throws java.lang.Exception Ukoliko nastane problem pri konverziji odgovora u objekat.
      */
     GenericEntity getResponse(ResultSet rs) throws Exception;
 
     /**
-     * @return Vraca String koji predstavlja kriterijum brisanja postojecih vrednosti u bazi.
+     * Vraca String koji predstavlja kriterijum brisanja postojecih vrednosti u bazi.
+     * 
+     * @return String koji predstavlja kriterijum brisanja postojecih vrednosti u bazi.
      */
     String getDeleteCriteria();
     
     /**
-     * @return Vraca String koji predstavlja nove vrednosti koje ce biti zamenjene starim koje se vec nalaze u bazi.
+     * Vraca String koji predstavlja nove vrednosti koje ce biti zamenjene starim koje se vec nalaze u bazi.
+     * 
+     * @return String koji predstavlja nove vrednosti koje ce biti zamenjene starim koje se vec nalaze u bazi.
      */
     String getEditValues();
 
     /**
-     * @return Vraca String koji predstavlja kriterijum izmene postojecih vrednosti u bazi.
+     * Vraca String koji predstavlja kriterijum izmene postojecih vrednosti u bazi.
+     * 
+     * @return String koji predstavlja kriterijum izmene postojecih vrednosti u bazi.
      */
     String getEditCriteria();
 

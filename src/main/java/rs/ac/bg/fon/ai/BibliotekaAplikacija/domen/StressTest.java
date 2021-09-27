@@ -65,7 +65,7 @@ public class StressTest implements GenericEntity {
      * @param opisTesta Opis stress testa kao String.
      * 
      * @throws java.lang.NullPointerException Ako je vrednost parametra null.
-     * @throws lava.lang.RuntimeException Ako je vrednost parametra String koji je kraci od 5 karaktera.
+     * @throws java.lang.RuntimeException Ako je vrednost parametra String koji je kraci od 5 karaktera.
      */
     public void setOpisTesta(String opisTesta) {
     	if(opisTesta==null) {
@@ -91,7 +91,7 @@ public class StressTest implements GenericEntity {
      * 
      * @param stressTestId ID stress testa kao int.
      * 
-     * @throws lava.lang.RuntimeException Ako je vrednost parametra int koji je negativan broj.
+     * @throws java.lang.RuntimeException Ako je vrednost parametra int koji je negativan broj.
      */
     public void setStressTestId(int stressTestId) {
     	if(stressTestId < 0) {
@@ -115,7 +115,7 @@ public class StressTest implements GenericEntity {
      * @param nazivTesta Naziv stress testa kao String.
      * 
      * @throws java.lang.NullPointerException Ako je vrednost parametra null.
-     * @throws lava.lang.RuntimeException Ako je vrednost parametra String koji je kraci od 2 karaktera.
+     * @throws java.lang.RuntimeException Ako je vrednost parametra String koji je kraci od 2 karaktera.
      */
     public void setNazivTesta(String nazivTesta) {
     	if(nazivTesta==null) {

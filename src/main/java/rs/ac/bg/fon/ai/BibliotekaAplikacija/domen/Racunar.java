@@ -89,7 +89,7 @@ public class Racunar implements GenericEntity {
      * @param garancija Datum garancije racunara kao Date.
      * 
      * @throws java.lang.NullPointerException Ako je vrednost parametra null.
-     * @throws lava.lang.RuntimeException Ako je vrednost parametra datum u proslosti.
+     * @throws java.lang.RuntimeException Ako je vrednost parametra datum u proslosti.
      */
     public void setGarancija(Date garancija) {
     	if(garancija==null) {
@@ -115,7 +115,7 @@ public class Racunar implements GenericEntity {
      * 
      * @param racunarID ID racunara kao int.
      * 
-     * @throws lava.lang.RuntimeException Ako je paremtar int manji od nula.
+     * @throws java.lang.RuntimeException Ako je paremtar int manji od nula.
      */
     public void setRacunarID(int racunarID) {
     	if(racunarID < 0) {
@@ -162,7 +162,7 @@ public class Racunar implements GenericEntity {
      * @param namena Namena racunara kao String.
      * 
      * @throws java.lang.NullPointerException Ako je vrednost parametra null.
-     * @throws lava.lang.RuntimeException Ako je vrednost parematara String sa manje od 5 karaktera.
+     * @throws java.lang.RuntimeException Ako je vrednost parematara String sa manje od 5 karaktera.
      */
     public void setNamena(String namena) {
     	if(namena==null) {
@@ -194,7 +194,7 @@ public class Racunar implements GenericEntity {
     /*
      * Postavlja listu stavke racunara.
      * 
-     * @parametar Lista stavki racunara kao lista klase StavkaRacuanra.
+     * @parametar stavke Lista stavki racunara kao lista klase StavkaRacuanra.
      * 
      * @throws java.lang.NullPointerException Ako je vrednost parametra null.
      */

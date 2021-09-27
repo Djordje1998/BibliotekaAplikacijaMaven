@@ -101,7 +101,7 @@ public class StavkaRacunara implements GenericEntity {
      * 
      * @param redniBroj Redni broj kao int.
      * 
-     * @throws lava.lang.RuntimeException Ako je redni broj vrednost int manja od nule.
+     * @throws java.lang.RuntimeException Ako je redni broj vrednost int manja od nule.
      */
     public void setRedniBroj(int redniBroj) {
     	if(redniBroj < 0) {
@@ -124,7 +124,7 @@ public class StavkaRacunara implements GenericEntity {
      * 
      * @param cena Cena stavke racunara kao double.
      * 
-     * @throws lava.lang.RuntimeException Ako je parametar vrednost int manja od nule.
+     * @throws java.lang.RuntimeException Ako je parametar vrednost int manja od nule.
      */
     public void setCena(double cena) {
     	if(cena < 0) {
@@ -193,7 +193,7 @@ public class StavkaRacunara implements GenericEntity {
      * 
      * @param kolicina Kolicina stavke racunara kao int.
      * 
-     * @throws lava.lang.RuntimeException Ako je parametar int vrednost manaj od nula.
+     * @throws java.lang.RuntimeException Ako je parametar int vrednost manaj od nula.
      */
     public void setKolicina(int kolicina) {
     	if(kolicina < 0) {
@@ -216,7 +216,7 @@ public class StavkaRacunara implements GenericEntity {
      * 
      * @param ukupnaCena Ukupna cena stasvke racunara kao double.
      * 
-     * @throws lava.lang.RuntimeException Ako je paremtar double vrednost manja od nula.
+     * @throws java.lang.RuntimeException Ako je paremtar double vrednost manja od nula.
      */
     public void setUkupnaCena(double ukupnaCena) {
     	if(ukupnaCena < 0) {

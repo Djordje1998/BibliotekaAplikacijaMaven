@@ -116,7 +116,7 @@ public class Benchmark implements GenericEntity {
      * 
      * @param benchmarkId ID benchmarka kao int.
      * 
-     * @throws lava.lang.RuntimeException Ako je vrednost parametra int koji je manji od nule.
+     * @throws java.lang.RuntimeException Ako je vrednost parametra int koji je manji od nule.
      */
     public void setBenchmarkId(int benchmarkId) {
     	if(benchmarkId < 0) {
@@ -162,7 +162,7 @@ public class Benchmark implements GenericEntity {
      * 
      * @param bodoviPrvogRacunara Rezultat testiranja prvog racunara kao double.
      * 
-     * @throws lava.lang.RuntimeException Ako je vrednost parametra double koji je manji od nule.
+     * @throws java.lang.RuntimeException Ako je vrednost parametra double koji je manji od nule.
      */
     public void setBodoviPrvogRacunara(double bodoviPrvogRacunara) {
     	if(bodoviPrvogRacunara < 0) {
@@ -183,9 +183,9 @@ public class Benchmark implements GenericEntity {
     /**
      * Postavlje bodove drugog racunara kao rezultat testiranja.
      * 
-     * @param bodoviPrvogRacunara Rezultat testiranja drugog racunara kao double.
+     * @param bodoviDrugogRacunara Rezultat testiranja drugog racunara kao double.
      * 
-     * @throws lava.lang.RuntimeException Ako je vrednost parametra double koji je manji od nule.
+     * @throws java.lang.RuntimeException Ako je vrednost parametra double koji je manji od nule.
      */
     public void setBodoviDrugogRacunara(double bodoviDrugogRacunara) {
     	if(bodoviDrugogRacunara < 0) {
@@ -229,7 +229,7 @@ public class Benchmark implements GenericEntity {
     /**
      * Postavlja drugi racunar benchmarka.
      * 
-     * @param prviRacunar Drugi racunar benchmarka kao klasa Racunar.
+     * @param drugiRacunar Drugi racunar benchmarka kao klasa Racunar.
      * 
      * @throws java.lang.NullPointerException Ako je vrednost parametra null.
      */

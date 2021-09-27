@@ -86,7 +86,7 @@ public class Komponenta implements GenericEntity {
      * 
      * @param takt Takt komponente kao double.
      * 
-     * @throws lava.lang.RuntimeException AKo je parametar double vrednost koja je manja od nule.
+     * @throws java.lang.RuntimeException AKo je parametar double vrednost koja je manja od nule.
      */
     public void setTakt(double takt) {
     	if(takt < 0) {
@@ -109,7 +109,7 @@ public class Komponenta implements GenericEntity {
      * 
      * @param komponentaId ID komponente kao int.
      * 
-     * @throws lava.lang.RuntimeException AKo je parametar int vrednost koja je manja od nule.
+     * @throws java.lang.RuntimeException AKo je parametar int vrednost koja je manja od nule.
      */
     public void setKomponentaId(int komponentaId) {
     	if(komponentaId < 0) {
@@ -179,7 +179,7 @@ public class Komponenta implements GenericEntity {
      * @param opis Opis komponente kao String.
      * 
      * @throws java.lang.NullPointerException Ako je vrednost parametra null.
-     * @throws lava.lang.RuntimeException Ako je parametar String kraci od 5 karaktera.
+     * @throws java.lang.RuntimeException Ako je parametar String kraci od 5 karaktera.
      */
     public void setOpis(String opis) {
     	if(opis==null) {
@@ -205,7 +205,7 @@ public class Komponenta implements GenericEntity {
      * 
      * @param cena Cena komponente kao double.
      * 
-     * @throws lava.lang.RuntimeException Ako je parametar double manji od nule.
+     * @throws java.lang.RuntimeException Ako je parametar double manji od nule.
      */
     public void setCena(double cena) {
     	if(cena < 0) {

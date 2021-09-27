@@ -75,6 +75,7 @@ public class Korisnik implements GenericEntity {
     /**
      * Konstruktor koji inicijalizuje objekat i postavlja vrednost svih atributa osim atributa sifraPotvrda.
      * 
+     * @param korisnikId Id korisnika kao int
      * @param ime Ime korisnika kao String.
      * @param prezime Prezime korisnika kao String.
      * @param korisnickoIme Korisnicko ime kao String.
@@ -103,7 +104,7 @@ public class Korisnik implements GenericEntity {
      * @param sifra Sifra korisnika kao String.
      * 
      * @throws java.lang.NullPointerException Ako je vrednost parametra null.
-     * @throws lava.lang.RuntimeException Ako je parametar String sa manje od 5 karaktera.
+     * @throws java.lang.RuntimeException Ako je parametar String sa manje od 5 karaktera.
      */
     public void setSifra(String sifra) {
     	if(sifra==null) {
@@ -150,10 +151,10 @@ public class Korisnik implements GenericEntity {
     /**
      * Postavlja prezime korisnika.
      * 
-     * @param prezimePrezime korisnika kao String.
+     * @param prezime Prezime korisnika kao String.
      * 
      * @throws java.lang.NullPointerException Ako je vrednost parametra null.
-     * @throws lava.lang.RuntimeException Ako je vrednost parametra String sa manje od 2 karaktera.
+     * @throws java.lang.RuntimeException Ako je vrednost parametra String sa manje od 2 karaktera.
      */
     public void setPrezime(String prezime) {
     	if(prezime==null) {
@@ -177,10 +178,10 @@ public class Korisnik implements GenericEntity {
     /**
      * Postavlja korisnicko ime korisnika.
      * 
-     * @param korisnickoIme Korisnicko ime korisnika kao String.
+     * @param korisnicko Ime Korisnicko ime korisnika kao String.
      * 
      * @throws java.lang.NullPointerException Ako je vrednost parametra null.
-     * @throws lava.lang.RuntimeException Ako je vrednost parametra String sa manje od 2 karaktera.
+     * @throws java.lang.RuntimeException Ako je vrednost parametra String sa manje od 2 karaktera.
      */
     public void setKorisnickoIme(String korisnickoIme) {
     	if(korisnickoIme==null) {
@@ -206,7 +207,7 @@ public class Korisnik implements GenericEntity {
      * 
      * @param korisnikId ID korisnika kao int.
      * 
-     * @throws lava.lang.RuntimeException Ako je vrednost parametra int manji od nule.
+     * @throws java.lang.RuntimeException Ako je vrednost parametra int manji od nule.
      */
     public void setKorisnikId(int korisnikId) {
     	if(korisnikId<0) {
@@ -230,7 +231,7 @@ public class Korisnik implements GenericEntity {
      * @param sifraPotvrda Potvrdjena sifra korisnika kao String.
      * 
      * @throws java.lang.NullPointerException Ako je vrednost parametra null.
-     * @throws lava.lang.RuntimeException Ako je vrednost parametra String kraci od dva karaktera.
+     * @throws java.lang.RuntimeException Ako je vrednost parametra String kraci od dva karaktera.
      */
     public void setSifraPotvrda(String sifraPotvrda) {
     	if(sifraPotvrda==null) {
