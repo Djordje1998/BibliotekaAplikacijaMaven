@@ -14,7 +14,7 @@ import javax.management.RuntimeErrorException;
  * Klasa koja predstavlja korisnika i sadrzi ID koji je jedinstven za svakog korisnika.
  * Svaki korisnik sadrzi atribute ime, prezime, korisnicko ime, sifra i sifra potvrda.
  *
- * @author DarkForce
+ * @author Djordje Novakovic
  * @version 1.0
  */
 public class Korisnik implements GenericEntity {

@@ -13,8 +13,8 @@ import java.util.Date;
  *Klasa sadrzi reference racunara, komponente i korisnika koji ju je kreirao.
  *Svaka stavka pored referenci ima datum, cenu i kolicinu i ukupnu cenu kao proizvod te dve vrednosti.
  *
- * @author DarkForce
- * @version 2.0
+ * @author Djordje Novakovic
+ * @version 1.0
  */
 public class StavkaRacunara implements GenericEntity {
 

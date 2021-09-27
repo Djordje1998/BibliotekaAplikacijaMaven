@@ -11,7 +11,7 @@ import java.sql.ResultSet;
  * Klasa koja predstavlja ocene komponente za odredjeni test.
  * Svaka ocena sadrzi referencu ka postojecoj komponenti i stres testu kao i vrednost ocene
  *
- * @author DarkForce
+ * @author Djordje Novakovic
  * @version 1.0
  */
 public class Ocena implements GenericEntity {

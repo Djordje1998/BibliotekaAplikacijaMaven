@@ -12,7 +12,7 @@ import java.util.Objects;
  * Klasa koja predstavlja komponentu i sadrzi ID koji je jedinstven za svaku komponentu.
  * Svaka komponenta poseduje naziv kompoente, takt, opis, cenu i tip komponente kao referenca klase TipKOmponente.
  *
- * @author DarkForce
+ * @author Djordje Novakovic
  * @version 1.0
  */
 public class Komponenta implements GenericEntity {

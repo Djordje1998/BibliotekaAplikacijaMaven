@@ -14,7 +14,7 @@ import java.sql.ResultSet;
  * Svaka domenska klasa implementira za sebe metode u zavisnosti za njenom tabelom u bazi.
  * Intefejs nasledjuje intefjes Serializable kako bi se uspostavila komunikacija, slanje i primanje objekata.
  * 
- * @author DarkForce
+ * @author Djordje Novakovic
  * @version 1.0
  */
 public interface GenericEntity extends Serializable {
@@ -35,9 +35,9 @@ public interface GenericEntity extends Serializable {
     String getInsertValues();
 
     /**
-     * Postavlja ID stress testa.
+     * Postavlja ID domenske klase koju implementira.
      * 
-     * @param id ID stress testa kao int.
+     * @param id ID domenske klase koju implementira kao int.
      */
     void setId(int id);
 
