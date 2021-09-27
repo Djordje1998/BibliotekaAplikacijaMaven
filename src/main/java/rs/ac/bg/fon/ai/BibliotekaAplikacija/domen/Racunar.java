@@ -191,10 +191,10 @@ public class Racunar implements GenericEntity {
         return stavke;
     }
 
-    /*
+    /**
      * Postavlja listu stavke racunara.
      * 
-     * @parametar stavke Lista stavki racunara kao lista klase StavkaRacuanra.
+     * @param stavke Lista stavki racunara kao lista klase StavkaRacuanra.
      * 
      * @throws java.lang.NullPointerException Ako je vrednost parametra null.
      */
@@ -219,7 +219,7 @@ public class Racunar implements GenericEntity {
      * 
      * @param ukupnaCena Ukupna vrednost racunara kao double.
      * 
-     * @throws lava.lang.RuntimeException Ako je parematar double vredniost manja od nule.
+     * @throws java.lang.RuntimeException Ako je parematar double vredniost manja od nule.
      */
     public void setUkupnaCena(double ukupnaCena) {
     	if(ukupnaCena < 0) {

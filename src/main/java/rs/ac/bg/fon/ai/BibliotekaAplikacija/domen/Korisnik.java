@@ -178,7 +178,7 @@ public class Korisnik implements GenericEntity {
     /**
      * Postavlja korisnicko ime korisnika.
      * 
-     * @param korisnicko Ime Korisnicko ime korisnika kao String.
+     * @param korisnickoIme Ime Korisnicko ime korisnika kao String.
      * 
      * @throws java.lang.NullPointerException Ako je vrednost parametra null.
      * @throws java.lang.RuntimeException Ako je vrednost parametra String sa manje od 2 karaktera.
