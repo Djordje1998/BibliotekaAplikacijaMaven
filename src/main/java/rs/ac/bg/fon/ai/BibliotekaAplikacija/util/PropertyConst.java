@@ -16,5 +16,6 @@ public class PropertyConst {
     public static final String PASS = "pass";
     public static final String ADRESA = "localhost";
     public static final String FILE = "src/main/resources/rs/ac/bg/fon/ai/dbconfig.properties";
+    public static final String FILE_JSON = "src/main/resources/rs/ac/bg/fon/ai/dbconfig.json";
     
 }
